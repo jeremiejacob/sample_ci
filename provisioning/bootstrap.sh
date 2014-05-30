@@ -52,7 +52,7 @@ if [ ! -h /var/www ];
 then 
 
     rm -rf /var/www 
-    sudo ln -s /vagrant/webapp/public /var/www
+    sudo ln -s /vagrant/ci/public /var/www
 
     a2enmod rewrite
 
