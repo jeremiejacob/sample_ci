@@ -38,6 +38,10 @@
 |
 */
 
+$route['products/shoes/(:any)/(:num)'] = 'products/shoes/$1/$2';
+$route['blog'] = 'blog/index';
+$route['blog/comments'] = 'blog/comments';
+$route['news/create'] = 'news/create';
 $route['news/(:any)'] = 'news/view/$1';
 $route['news'] = 'news/index';
 $route['(:any)'] = 'pages/view/$1';
