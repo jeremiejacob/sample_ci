@@ -3,6 +3,7 @@
 
 		public function login($username, $pass){
 
+			
 			$this->db->select('username','pass');
 			$this->db->from('members');
 			$this->db->where('username', $username);

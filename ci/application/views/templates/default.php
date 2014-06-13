@@ -43,23 +43,33 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/">SMJ Donation System</a>
+          <a class="navbar-brand" href="/">MyBlog</a>
         </div>
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <?php echo $this->authentication->get_role() ? $this->load->view('menu/' . $this->authentication->get_role(), '', TRUE) : '<li></li>'; ?>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <?php if ($this->authentication->is_logged_in()): ?>
-              <li><a href="/logout">Logout</a></li>
-            <?php endif; ?>
-          </ul>
-        </div><!--/.nav-collapse -->
+        </div>
+          <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+            <ul class="nav navbar-nav">
+              <li>
+                <a href="">Getting started</a>
+              </li>
+              <li class="active">
+                <a href="">About MyBlog</a>
+              </li>
+              <li class="active">
+                <a href="">Blog Entries</a>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a>Welcome, User</a></li>
+              <li><a href="/home/create_blog">Compose Blog</a></li>
+              <li><a href="/logout/logout">Logout</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </div>
 
     <div class="container">
-      <h2><?php echo $title; ?></h2>
+      <h2><?php echo 'MyBlog'; ?></h2>
       <?php if ($this->session->flashdata('flash_success_message')): ?>
         <div class="alert alert-success"><?php echo $this->session->flashdata('flash_success_message') ?></div>
       <?php endif ?>
@@ -72,7 +82,7 @@
     <!-- footer -->
     <div id="footer">
       <div class="container">
-        <p class="text-muted">Copyright © SOCIAL MEDIA JAPAN CO., LTD. ALL Right Reserved.</p>
+        <p class="text-muted">Copyright © Rie Jack. ALL Right Reserved.</p>
       </div>
     </div>
 

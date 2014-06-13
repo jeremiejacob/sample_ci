@@ -14,8 +14,9 @@
 			$session_id = $this->session->userdata('username');
 
 			$this->load->model("home_blog_model");
-    		$resultdata['results'] = $this->home_blog_model->retrieveall_data_fromfield();
-			$this->load->view('home_view', $resultdata);
+			$data['title'] = ucfirst(lang('home'));
+    		$data['results'] = $this->home_blog_model->retrieveall_data_fromfield();
+			$this->template->load('default','home_view', $data);
 		}
 
 
