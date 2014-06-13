@@ -27,19 +27,17 @@
   </head>
 
   <body>
-
-    <div class="container">
-      <?php echo form_open('login/validate', array('class' => 'form-signin', 'role' => 'form')); ?>
-        <h2 class="form-signin-heading"><?php echo 'Login'; ?></h2>
-        <?php echo form_input(array('name' => 'username', 'id' => 'username', 'value' => set_value('username'), 'class' => 'form-control', 'placeholder' => 'Username')); ?>
-        <?php echo form_password(array('name' => 'password', 'id' => 'password', 'class' => 'form-control', 'placeholder' => 'Password')); ?>
-        <?php echo form_submit('login', ' Log In', 'class="btn btn-primary btn-lg btn-block"'); ?>
-        <?php echo form_submit('signup', ' Create account. Sign up!', 'class="btn btn-warning btn-lg btn-block"'); ?>
-      <?php echo form_close(); ?>
-      <?php echo validation_errors(); ?>
-    </div> <!-- /container -->
-
-
+	<div class="container">
+	      <?php echo form_open('signup/check_signup_data', array('class' => 'form-signin', 'role' => 'form')); ?>
+	        <h2 class="form-signin-heading"><?php echo 'Create an account.'; ?></h2>
+	        <?php echo form_input(array('name' => 'firstname', 'id' => 'firstname', 'value' => set_value('firstname'), 'class' => 'form-control', 'placeholder' => 'Firstname')); ?>
+	        <?php echo form_input(array('name' => 'lastname', 'id' => 'lastname', 'value' => set_value('lastname'), 'class' => 'form-control', 'placeholder' => 'Lastname')); ?>
+	        <?php echo form_input(array('name' => 'username', 'id' => 'username', 'value' => set_value('username'), 'class' => 'form-control', 'placeholder' => 'Email/Username')); ?>
+	        <?php echo form_password(array('name' => 'password', 'id' => 'password', 'class' => 'form-control', 'placeholder' => 'Password')); ?>
+	        <?php echo form_submit('signup', ' Sign up', 'class="btn btn-primary btn-lg btn-block"'); ?>
+	      <?php echo form_close(); ?>
+	      <?php echo validation_errors(); ?>
+	</div> <!-- /container -->
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->

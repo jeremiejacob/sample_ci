@@ -19,6 +19,7 @@
 
 		public function verify_new_member($username){
 
+			print_r($username);
 			$this->db->select('username');
 			$this->db->from('members');
 			$this->db->where('username', $username);

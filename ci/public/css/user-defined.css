@@ -1,0 +1,37 @@
+.controls-sm-2 {
+  padding-left: 17.66666667%;
+}
+
+.table-view td:first-child {
+  font-weight: bold;
+  width: 200px;
+  text-align: right;
+  padding-right: 15px;
+  padding-top: 7px;
+}
+
+.table-view td:last-child {
+  padding-top: 7px;
+  padding-left: 15px;
+}
+
+/**
+ * Calendar Form Helper styles
+ */
+.calendar-table th {
+  text-align: right;
+}
+
+.day-data {
+  width: 120px;
+  height: 120px;
+}
+
+.day-data-value {
+  text-align: right;
+}
+
+.day-data-extra-label {
+  font-weight: bold;
+  padding-right: 10px;
+}
