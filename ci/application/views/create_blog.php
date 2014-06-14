@@ -27,15 +27,25 @@
   </head>
 
   <body>
-
-    <div class="container">
-      <?php echo form_open('login/validate', array('class' => 'form-signin', 'role' => 'form')); ?>
-        <h2 class="form-signin-heading"><?php echo 'Login'; ?></h2>
-        <?php echo form_input(array('name' => 'username', 'id' => 'username', 'value' => set_value('username'), 'class' => 'form-control', 'placeholder' => 'Username')); ?>
-        <?php echo form_password(array('name' => 'password', 'id' => 'password', 'class' => 'form-control', 'placeholder' => 'Password')); ?>
-        <?php echo form_submit('login', ' Log In', 'class="btn btn-primary btn-lg btn-block"'); ?>
-        <?php echo form_submit('signup', ' Create account. Sign up!', 'class="btn btn-warning btn-lg btn-block"'); ?>
-      <?php echo form_close(); ?>
+  	
+  	<div class="container">
+        <?php echo form_open('home/post_blog', array('class' => 'form-signin', 'role' => 'form')); ?>
+    		  <div class="form-group">
+    		    <label for="author_name">Author</label>
+    		    <input name="author_name" type="text" class="form-control" id="author_name" placeholder="Enter author name" require="">
+    		  </div>
+    		  <div class="form-group">
+    		    <label for="title_entry">Entry Title</label>
+    		    <input name="title_entry" type="text" class="form-control" id="title_entry" placeholder="Enter title">
+    		  </div>
+    		  <div class="form-group">
+    		    <label for="content">Content</label>
+    		    <textarea name="content" type="text" class="form-control" id="content" placeholder="Blog content here." rows="10"></textarea>
+    		  </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-default" align-text="center">Submit</button>
+          </div>
+  		<?php echo form_close(); ?>
       <?php echo validation_errors(); ?>
     </div> <!-- /container -->
 
@@ -45,3 +55,5 @@
     <!-- Placed at the end of the document so the pages load faster -->
   </body>
 </html>
+
+

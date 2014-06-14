@@ -37,9 +37,11 @@
 | in the URL cannot be matched to a valid route.
 |
 */
+$route['signup'] = 'signup/index';
 $route['home'] = 'home/index';
 $route['login'] = 'login/index';
-$route['default_controller'] = 'login';
+//$route['default_controller'] = 'login';
+$route['default_controller'] = 'map/index';
 
 
 /* End of file routes.php */

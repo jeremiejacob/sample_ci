@@ -3,6 +3,7 @@
 
 		public function login($username, $pass){
 
+			
 			$this->db->select('username','pass');
 			$this->db->from('members');
 			$this->db->where('username', $username);
@@ -19,6 +20,7 @@
 
 		public function verify_new_member($username){
 
+			print_r($username);
 			$this->db->select('username');
 			$this->db->from('members');
 			$this->db->where('username', $username);
